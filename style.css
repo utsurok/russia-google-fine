@@ -1,0 +1,19 @@
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+h1 {
+  font-weight: unset;
+  font-style: italic;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  font-size: 2rem;
+}
+
+.number {
+  text-align: right;
+}
