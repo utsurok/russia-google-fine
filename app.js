@@ -5,14 +5,14 @@ const elements = {
   totalFine: document.getElementById("totalFine"),
 };
 
-const currentUnixTime = Date.now() / 1000;
+const currentUnixTime = Math.trunc(Date.now() / 1000);
 
 const days = calcDaysByUnixTime(currentUnixTime);
 
 const { todayFine, totalFine } = calcFineByDays(days);
 
-const numberFormat = n =>
+const formatFine = n =>
   n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",\u200B");
 
-elements.totalFine.textContent = numberFormat(totalFine);
-elements.todayFine.textContent = numberFormat(todayFine);
+elements.totalFine.textContent = formatFine(totalFine);
+elements.todayFine.textContent = formatFine(todayFine);
